@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aira cute</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        height: 100vh;
+        background: rgb(202, 202, 202);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .div{
+        height: 200px;
+        width: 200px;
+        background: rgb(131, 17, 36);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s ;
+        cursor: pointer;
+    }
+    .div:hover{
+        background: rgb(150, 40, 7);
+    }
+</style>
+<body>
+    <div class="div">
+        <p>AIRA <3 LUKE </p>
+
+    </div>
+
+
+    <script>
+       const mydiv = document.querySelector('.div')
+
+       mydiv.addEventListener('click', (e) => {
+        e.stopPropagation();
+        mydiv.style.position = "fixed"
+        mydiv.style.bottom = Math.floor(Math.random()*100)+'%';
+        mydiv.style.left = Math.floor(Math.random()*100)+'%';
+       })
+    </script>
+</body>
+</html>
